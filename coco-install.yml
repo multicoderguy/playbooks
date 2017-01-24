@@ -1,0 +1,8 @@
+---
+- name: Chocolatey install {{ p }}
+  hosts: windows
+  tasks:
+    - name: chocolately installation
+      win_chocolatey:
+        name: '{{ p }}'
+

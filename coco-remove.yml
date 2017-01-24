@@ -1,0 +1,9 @@
+---
+- name: Chocolatey uninstall {{ p }}
+  hosts: windows
+  tasks:
+    - name: chocolately remove
+      win_chocolatey:
+        name: '{{ p }}'
+        state: absent
+
